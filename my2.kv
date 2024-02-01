@@ -1,0 +1,133 @@
+
+<MyGrid2>:
+	
+	canvas.before:
+		
+        Rectangle:
+            source:'/home/racer/Pictures/Screenshots/c.png'
+            pos: self.pos
+            size: self.size		
+	
+	
+	FloatLayout:
+	 
+		
+				
+		
+		Button:
+			font_size:30	
+			markup:True
+			size_hint:None,None
+			size: 350, 80
+			pos_hint:{"x":2,"y":3.5}
+			text:"[color=#FFF][b]Manual[/b][/color]"
+			background_color:1, 0.647, 0, 1
+			on_release:root.btn1()
+			on_press:self.background_color = (0, 0.5, 0, 1)
+			on_release: self.background_color = (1, 0.647, 0, 1)
+			
+			canvas.before:
+				Color:
+					rgba:.5,.5,.5,1
+				Line:
+					width:2
+					rectangle:self.x,self.y,self.width,self.height
+						
+						
+			
+		Button:
+			font_size:30
+			markup:True			
+			size_hint:None,None
+			size: 350, 80
+			pos_hint:{"x":2,"y":2.5}
+			text:"[color=#FFF][b]Remote[/b][/color]"
+			on_release:root.btn2()
+			background_color:1, 0.647, 0, 1
+			on_press:self.background_color = (0.5, 0, 0, 1)
+			on_release: self.background_color = (1, 0.647, 0, 1)
+			canvas.before:
+				Color:
+					rgba:.5,.5,.5,1
+				Line:
+					width:2
+					rectangle:self.x,self.y,self.width,self.height	
+		Button:
+			font_size:30
+			markup:True			
+			size_hint:None,None
+			size: 350, 80
+			pos_hint:{"x":2,"y":1.5}
+			text:"[color=#FFF][b]Build a map[/b][/color]"
+			on_release:root.btn6()
+			background_color:1, 0.647, 0, 1
+			on_press:self.background_color = (0.5, 0, 0, 1)
+			on_release: self.background_color = (1, 0.647, 0, 1)
+			canvas.before:
+				Color:
+					rgba:.5,.5,.5,1
+				Line:
+					width:2
+					rectangle:self.x,self.y,self.width,self.height				
+		Button:
+			size_hint:None,None
+			size:50,50
+			pos_hint:{"x":7,"y":1.2}
+			text:"volume"
+			on_release:root.btn3()
+			Image:
+				source:'/home/racer/Downloads/hello.png'
+				center_x:self.parent.center_x
+				center_y:self.parent.center_y
+				
+		Button:
+			size_hint:None,None
+			size:50,50
+			pos_hint:{"x":7,"y":5.2}
+			Image:
+				source:'/home/racer/Downloads/download.png'
+				center_x:self.parent.center_x
+				center_y:self.parent.center_y
+		Button:
+			size_hint:None,None
+			size:50,50
+			pos_hint:{"x":3.5,"y":0.05}
+			on_release:root.btn5()
+			Image:
+				source:'/home/racer/Pictures/Screenshots/d.png'
+				center_x:self.parent.center_x
+				center_y:self.parent.center_y
+				
+		Button:
+			size_hint:None,None
+			size:50,50
+			pos_hint:{"x":1.5,"y":0.05}
+			on_release:root.btn4()
+			Image:
+				source:'/home/racer/Pictures/Screenshots/e.png'
+				center_x:self.parent.center_x
+				center_y:self.parent.center_y	
+				
+
+				
+						
+	
+
+			
+<P>:		
+	Slider:
+			
+		pos_hint:{"x":0.0,"y":0.2}
+		min:100
+		max:200
+		on_value:root.slide(*args)
+        	
+	 	
+		
+	
+		
+			
+
+	
+		
+

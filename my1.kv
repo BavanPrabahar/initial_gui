@@ -1,0 +1,122 @@
+
+
+<MyGrid>:
+	
+	canvas.before:
+		
+        Rectangle:
+            source:'/home/racer/Pictures/Screenshots/c.png'
+            pos: self.pos
+            size: self.size		
+	
+	
+	FloatLayout:
+	 
+		
+				
+		Label:
+			font_size:45
+			size_hint:0.5,0.5
+			pos_hint:{"x":3.75,"y":4.5}
+			markup:True
+			text: "[color=#E25213]welcome to Ubot[/color]"
+		Button:
+			font_size:30	
+			markup:True
+			size_hint:None,None
+			size: 150, 200
+			pos_hint:{"x":1.2,"y":2}
+			text:"[color=#049613][b]power on[/b][/color]"
+			background_color: 0, 0, 0, 0
+			on_release:root.btn1()
+			on_press:self.background_color = (0, 0.5, 0, 1)
+			on_release: self.background_color = (0, 0, 0, 0)
+			
+			canvas.before:
+				Color:
+					rgba:.5,.5,.5,1
+				Line:
+					width:2
+					rectangle:self.x,self.y,self.width,self.height
+						
+						
+			
+		Button:
+			font_size:30
+			markup:True			
+			size_hint:None,None
+			size: 150, 200
+			pos_hint:{"x":5,"y":2}
+			text:"[color=#A70505][b]Power off[/b][/color]"
+			on_release:root.btn2()
+			background_color:0,0,0,0
+			on_press:self.background_color = (0.5, 0, 0, 1)
+			on_release: self.background_color = (0, 0, 0, 0)
+			canvas.before:
+				Color:
+					rgba:.5,.5,.5,1
+				Line:
+					width:2
+					rectangle:self.x,self.y,self.width,self.height	
+		Button:
+			size_hint:None,None
+			size:50,50
+			pos_hint:{"x":7,"y":1.2}
+			text:"volume"
+			on_release:root.btn3()
+			Image:
+				source:'/home/racer/Downloads/hello.png'
+				center_x:self.parent.center_x
+				center_y:self.parent.center_y
+				
+		Button:
+			size_hint:None,None
+			size:50,50
+			pos_hint:{"x":7,"y":5.2}
+			Image:
+				source:'/home/racer/Downloads/download.png'
+				center_x:self.parent.center_x
+				center_y:self.parent.center_y
+		Button:
+			size_hint:None,None
+			size:50,50
+			pos_hint:{"x":3.5,"y":0.05}
+			on_release:root.btn5()
+			Image:
+				source:'/home/racer/Pictures/Screenshots/d.png'
+				center_x:self.parent.center_x
+				center_y:self.parent.center_y
+				
+		Button:
+			size_hint:None,None
+			size:50,50
+			pos_hint:{"x":1.5,"y":0.05}
+			on_release:root.btn4()
+			Image:
+				source:'/home/racer/Pictures/Screenshots/e.png'
+				center_x:self.parent.center_x
+				center_y:self.parent.center_y	
+				
+
+				
+						
+	
+
+			
+<P>:		
+	Slider:
+			
+		pos_hint:{"x":0.0,"y":0.2}
+		min:100
+		max:200
+		
+		on_value:root.slide(*args)
+        	
+	 	
+		
+	
+		
+			
+
+	
+		

@@ -1,0 +1,82 @@
+
+<MyGrid4>:
+	
+	canvas.before:
+		Color:
+			rgba:1,1,1,1
+		Rectangle:
+			pos:self.pos
+			size:self.size	
+        Rectangle:
+            source:'/home/racer/Pictures/Screenshots/c.png'
+            pos: self.pos
+            size: self.size		
+	
+	
+	FloatLayout:
+	 
+		
+				
+		
+		Button:
+			size_hint:None,None
+			size:50,50
+			pos_hint:{"x":7,"y":1.2}
+			text:"volume"
+			on_press:root.btn3()
+			Image:
+				source:'/home/racer/Downloads/hello.png'
+				center_x:self.parent.center_x
+				center_y:self.parent.center_y
+				
+		Button:
+			size_hint:None,None
+			size:50,50
+			pos_hint:{"x":7,"y":5.2}
+			Image:
+				source:'/home/racer/Downloads/download.png'
+				center_x:self.parent.center_x
+				center_y:self.parent.center_y
+		Button:
+			size_hint:None,None
+			size:50,50
+			pos_hint:{"x":3.5,"y":0.05}
+			on_press:root.btn5()
+			Image:
+				source:'/home/racer/Pictures/Screenshots/d.png'
+				center_x:self.parent.center_x
+				center_y:self.parent.center_y
+				
+		Button:
+			size_hint:None,None
+			size:50,50
+			pos_hint:{"x":1.5,"y":0.05}
+			on_press:root.btn4()
+			Image:
+				source:'/home/racer/Pictures/Screenshots/e.png'
+				center_x:self.parent.center_x
+				center_y:self.parent.center_y	
+				
+
+				
+						
+	
+
+			
+<P>:		
+	Slider:
+			
+		pos_hint:{"x":0.0,"y":0.2}
+		min:100
+		max:200
+		on_value:root.slide(*args)
+        	
+	 	
+		
+	
+		
+			
+
+	
+		
+
